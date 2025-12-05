@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gym BMI Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url(/img.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: white;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 50px auto;
+      padding: 40px;
+      border: 5px solid #ffffff;
+      border-radius: 20px;
+      background: rgba(0,0,0,0.5);
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 12px;
+      font-size: 20px;
+      font-weight: bold;
+      border-radius: 15px;
+      border: none;
+      cursor: pointer;
+      background: #ffffff;
+      color: #000000;
+    }
+
+    .result {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Gym BMI Calculator</h1>
+
+    <div class="form-group">
+      <label for="weight">Weight (kg):</label>
+      <input type="number" id="weight" placeholder="Enter your weight">
+    </div>
+
+    <div class="form-group">
+      <label for="height">Height (cm):</label>
+      <input type="number" id="height" placeholder="Enter your height">
+    </div>
+
+    <button class="btn" onclick="calculate()">Calculate</button>
+
+    <div class="result" id="result"></div>
+  </div>
+
+  <script>
+    function calculate() {
+      let weight = document.getElementById('weight').value;
+      let height = document.getElementById('height').value;
+
+      if (weight === "" || height === "") {
+        document.getElementById('result').innerHTML = "Please enter both weight and height.";
+        return;
+      }
+
+      height = height / 100; // Convert cm to meters
+      let bmi = weight / (height * height);
+      bmi = bmi.toFixed(2); // Round to 2 decimal places
+
+      let category = "";
+
+      if (bmi < 18.5) category = "Underweight";
+      else if (bmi < 24.9) category = "Normal weight";
+      else if (bmi < 29.9) category = "Overweight";
+      else category = "Obese";
+
+      document.getElementById('result').innerHTML =
+        `Your BMI: <strong>${bmi}</strong> (${category})`;
+    }
+  </script>
+
+</body>
+</html>
