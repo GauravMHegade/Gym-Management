@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fittness_site</title>
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Libre+Baskerville:wght@700&family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="css/style.css
+    "
+    />
+    <style>
+      /* css reset */
+      * {
+        color: aliceblue;
+        font-family: "Baloo Bhai 2";
+      }
+      /* header {
+        position: static;
+      } */
+
+      /* -------------------------------------------------------------------------------------------------------------------------------------------------- */
+      body {
+        background-color: black;
+        margin: 0px;
+        padding: 0px;
+        /* background: url("img/barbell-1839086.jpg"); */
+        height: 750px;
+        /* width: 4721px; */
+        /* color: aliceblue; */
+        background-image: url(img/fixbgimg.jpg);
+        background-repeat: no-repeat;
+        background-position: center top;
+        height: 643px;
+      }
+
+      /* -------------------------------------------------------------------------------------------------------------------------------------------------- */
+      /* Upper Bar  */
+
+      /* LOGO BOX */
+      .left {
+        /* border: 1px solid red; */
+        display: inline-block;
+        position: absolute;
+        top: 5px;
+        height: 75px;
+        width: 95px;
+        margin: 10px 20px;
+        /* position: sticky; */
+      }
+      /* NAVBAR BOX */
+      .mid {
+        display: block;
+        margin: 10px 70px;
+        width: 800px;
+        padding: 8px 0px;
+        /* border: 1px solid red; */
+      }
+      /* LOGIN BOX */
+      .right {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        /* border: 1px solid red; */
+        display: inline-block;
+        padding: 10px;
+      }
+      /* -------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+      /* TEXT OF NAVBAR */
+      .navbar {
+        display: inline-block ;
+      }
+
+      .navbar li {
+        display: inline-block;
+        margin: 0px 0px;
+      }
+
+      .navbar li a {
+        color: aliceblue;
+        padding: 15px;
+        margin: 0px 16px;
+        font-size: 15px;
+        text-decoration: none;
+      }
+
+      /* .navbar li a :hover { */
+
+      .navbar li :hover {
+        text-decoration: underline;
+        color: rgb(14, 1, 1);
+        /* color: gray; */
+        background: rgb(88, 88, 88);
+        border-radius: 5px;
+      }
+      /* -------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+      /* TARGET TO IMG IN LEFT BOX */
+      .left img {
+        height: 60px;
+        width: 84px;
+        filter: invert(100%);
+        margin: 6px;
+        padding: 0px;
+      }
+
+      .left div {
+        display: inline-block;
+        position: absolute;
+        top: 53px;
+        right: 13px;
+        font-size: 13px;
+      }
+
+      /* -------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+      /* TO TARGET RIGHT BOX */
+
+      .btn {
+        margin: 0px 10px;
+        background-color: black;
+        border: 1px solid white;
+        border-radius: 5px;
+        font-size: 15px;
+        height: 55px;
+        width: 85px;
+      }
+      .right :hover {
+        text-decoration: underline;
+        color: rgb(0, 0, 0);
+        background: rgb(70, 70, 69);
+        border-color: rgb(6, 5, 5);
+        cursor: pointer;
+      }
+
+      /* -------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+      /* CONTAINER SETTINGS */
+      .container {
+        border: 2px solid gray;
+        border-radius: 5px;
+        margin: 40px 35px;
+        padding: 2px 2px;
+        width: 350px;
+      }
+
+      /* -------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+      /* TO CONTROL THE FROM SETTINGS */
+      form div input {
+        text-align: center;
+        color: black;
+        /* background-color: rgb(126, 124, 124); */
+        width: 200px;
+        border-radius: 5px;
+      }
+      /* -------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+      .mid-block {
+        border-top: 2px solid gray;
+        border-radius: 15px;
+        margin: 0px 0px;
+        padding: 100px 0px;
+        border-bottom: 2px solid gray;
+        display: flex;
+      }
+      /* -------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+      form div {
+        margin: 10px auto;
+        padding: 2px 0px;
+        width: 200px;
+      }
+
+      .container h1,
+      h4 {
+        text-align: center;
+      }
+      .container h1 {
+        font-size: 50px;
+        margin: 20px 0px;
+      }
+      .container h4 {
+        font-size: 20px;
+        margin: 0px 0px;
+      }
+
+      .container button {
+        display: block;
+        width: 100px;
+        margin: 30px auto;
+      }
+      /* -------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+      #side-box1 {
+        position: absolute;
+        margin: -40px 0px;
+        top: 300px;
+      }
+      #side-box2 {
+        position: absolute;
+        margin: -15px 0px;
+        top: 400px;
+      }
+      #side-box3 {
+        position: absolute;
+        top: 500px;
+        margin: 10px 0px;
+      }
+      .side-box {
+        display: inline-block;
+        height: 80px;
+        width: 80px;
+        padding: 0px 0px;
+        border-radius: 5px;
+        border: 1px solid gray;
+        right: 30px;
+      }
+      .detali {
+        text-align: center;
+      }
+
+      /* -------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+      #pic1 {
+        height: 80px;
+        width: 80px;
+        margin: 0px 0px;
+        padding: 0px 0px;
+        border-radius: 5px;
+      }
+      #pic2 {
+        height: 80px;
+        width: 80px;
+        margin: 0px 0px;
+        padding: 0px 0px;
+        border-radius: 5px;
+      }
+      #pic3 {
+        height: 80px;
+        width: 80px;
+        margin: 0px 0px;
+        padding: 0px 0px;
+        border-radius: 5px;
+      }
+
+      /* -------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+      #login-btn {
+        text-decoration: none;
+      }
+      #contact-btn {
+        text-decoration: none;
+      }
+      #sbtn {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="head">
+      <header>
+        <!-- Left Box For Logo -->
+        <div class="left">
+          <img src="img/1.jpg" alt="" />
+          <div>Fitness Culb</div>
+        </div>
+
+        <!-- Mid Box For Navbar -->
+        <div class="mid">
+          <ul class="navbar">
+            <li><a href="#">Home</a></li>
+            <li><a href="calculator.html">Fitness Calculator</a></li>
+            <li><a href="#">Branches</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="blog1.html">Blog</a></li>
+            <li><a href="about.html">About Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Right box for Buttons -->
+        <div class="right">
+          <button class="btn">
+            <a href="login.html" id="login-btn">Login</a>
+          </button>
+          <button class="btn">
+            <a href="owner.html" id="contact-btn">Contact Us</a>
+          </button>
+        </div>
+      </header>
+    </div>
+
+    <!-- <img src="img/barbell-1839086.jpg" alt="error" /> -->
+    <div class="container">
+      <h1>Join Now</h1>
+      <h4>- Sign In -</h4>
+      <form action="Noaction.php">
+        <div class="formGrp">
+          <input type="text" name="" placeholder="Enter Your Name" />
+        </div>
+        <div class="formGrp">
+          <input type="number" name="" placeholder="Enter Your Age" />
+        </div>
+        <div class="formGrp">
+          <input type="text" name="" placeholder="Enter Your Gender" />
+        </div>
+        <div class="formGrp">
+          <input type="email" name="" placeholder="Enter Your E-mail" />
+        </div>
+        <div class="formGrp">
+          <input type="password" name="" placeholder="Create Your Password" />
+        </div>
+        <button class="btn" id="sbtn">Submit</button>
+      </form>
+    </div>
+    <div class="side-box" id="side-box1">
+      <img src="img/9876.jpg" alt="" id="pic1" />
+      <div class="detali">Beginner</div>
+    </div>
+    <div class="side-box" id="side-box2">
+      <img src="img/5678.jpg" alt="" id="pic2" />
+      <div class="detali">Intermediate</div>
+    </div>
+    <div class="side-box" id="side-box3">
+      <img src="img/87667.jpg" alt="" id="pic3" />
+      <div class="detali">Advance</div>
+    </div>
+  </body>
+</html>
